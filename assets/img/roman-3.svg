@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.52" height="29.68" viewBox="0 0 29.52 29.68">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.99" x2="0.5" y2="0.01" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#816810"/>
+      <stop offset="0.158" stop-color="#816810"/>
+      <stop offset="0.517" stop-color="#b2983d"/>
+      <stop offset="0.856" stop-color="#e0c567"/>
+      <stop offset="0.995" stop-color="#e0c567"/>
+      <stop offset="1" stop-color="#e0c567"/>
+    </linearGradient>
+  </defs>
+  <path id="Gradient_Overlay" data-name="Gradient Overlay" d="M287.24,3239h29.52v-1.4c-3.12,0-3.32-.24-3.32-3.2v-20.56c0-2.88.2-3.16,3.32-3.16v-1.36H287.24v1.36c3.12,0,3.36.28,3.36,3.16v20.56c0,2.96-.24,3.2-3.36,3.2Zm12.88-4.6c0,2.92-.24,3.2-2.96,3.2-2.6,0-2.76-.4-2.76-3.2v-20.56c0-2.84.2-3.16,2.92-3.16,2.6,0,2.8.44,2.8,3.16Zm9.48,0c0,2.92-.2,3.2-2.92,3.2-2.64,0-2.76-.4-2.76-3.2v-20.56c0-2.84.16-3.16,2.92-3.16,2.6,0,2.76.44,2.76,3.16Z" transform="translate(-287.24 -3209.32)" fill="url(#linear-gradient)"/>
+</svg>

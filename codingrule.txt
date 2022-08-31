@@ -1,0 +1,158 @@
+HTMLについて
+＊html・body要素にはクラス・IDを使用しない。
+また、main要素にもクラス・IDは当てず、section要素等でmain内にブロックを作りそこにクラスを当てるのが望ましい。
+また相対パスは使わないでください。
+
+CSSの記述について
+＊wordpress等によって自動生成されるhtml・bodyに付与しているクラスは使用しない。
+
+＊可能な限り短いプロパティで定義する（ショートハンドを使う）
+.list-box {
+	margin: 20px 0 30px;
+}
+paddingやmarginなど、プロパティが重複する時に省略できるものは必ず省略する。
+
+＊id、classの使い分け IDセレクタは使わない
+ID要素は再利用可能でない
+スタイル適用の優先順位を意識する必要がある（詳細度）
+IDは特定の何かを示しているため、抽象化することは厳しい
+ID要素の使用はJavaScriptに限定し、CSSではクラス要素を使うべき
+
+＊クラスにはタイプセレクタを記述しない
+li.member-list {
+	color: #06c;
+}
+.member-list {
+	color: #06c;
+}
+
+＊なるべくならタイプセレクタに直接スタイルを当てず、適宜クラスをつける
+→ スタイルの再利用、後から追加された要素の変更などに対応するため
+.textbox p {
+	color: #06c;
+}
+.member-voice {
+	color: #06c;
+}
+ただし、a要素、input要素、textarea要素など「その要素でないと成り立たない」場合はその限りではない。
+
+
+SASSの記述について
+基本的にCSSの記述に準じ、送付されている_edit.scssにスタイルを記述する。
+記法はScss記法とする。
+
+＊セレクタをネストする際はインデントする。ネストの目安は基本的に3階層まで。
+.example {
+	margin: 0px;
+	a {
+		color: #11c;
+	}
+}
+記述はネストの浅いものから深いものへ順に書き、まとめておく。
+
+li {
+	border-bottom: 1px solid #eee;
+	span {
+		font-size: 14px;
+		color: #333;
+	}
+	a {
+		display: block;
+		padding: 10px;
+		background: #fff;
+		&:hover {
+			background: #aaa;
+		}
+	}
+}
+ネストが深くなりそうな場合は改めてクラスを振るなどして再利用可能な状態を保つこと。
+ネストは便利だが、再利用可能な状態を保つために「ネストも出来る」くらいの感覚でいい。
+
+
+＊ブレイクポイントについて
+_sitesetting.scssに記述してある
+-------------------------------------------------------------------------
+$bp-s : 640px;
+$bp-m : 768px;
+$bp-l : 992px;
+
+@mixin media( $size ) {
+	@if $size == s {
+		@media only screen and ( min-width: $bp-s ) {
+			@content;
+		}
+	}
+	@else if $size == m {
+		@media only screen and ( min-width: $bp-m ) {
+			@content;
+		}
+	}
+	@else if $size == l {
+		@media only screen and ( min-width: $bp-l ) {
+			@content;
+		}
+	}
+	@else {
+		@media only screen and ( min-width: $size ) {
+			@content;
+		}
+	}
+}
+------------------------------------------------------------------------
+をもとに作成する。
+
+基本的に、ブレイクポイントは992pxで、
+992px以上はPCビューを作成し、991px以下はspビューを作成する。
+例）
+.sample{
+	//spビュー
+	@include media(l) {
+		//pcビュー
+	}
+}
+
+＊フォントサイズについて
+cssでの直接的な指定(fontsize:16px;等)はせずに
+_mixin.scssに記載してある
+---------------------------------------------------
+@mixin fontsize($size: $font-size) {
+	font-size: $size;
+	font-size: ($size / 16px) * 1rem;
+}
+---------------------------------------------------
+を使用する。
+例)
+.sample{
+	@include fontsize(16px);
+}
+
+
+＊新規scssの作成について
+制作者の意向で、common.scssやconfig.scssといったように、ページを分けて制作したい場合は
+_edit.scssの同階層にフォルダを作りその中で新たにページを作成し、_edit.scssにインポートをすること。
+
+//階層例
+resources
+	L _reset.scss
+	L _edit.scss
+	L newfolder
+				L _common.scss
+				L _config.scss
+				L _setting.scss
+
+
+//_edit.scss内インポート例
+@charset "utf-8";
+
+@import "newfolder/setting";
+@import "newfolder/config";
+@import "newfolder/common";
+
+
+
+
+
+
+
+
+

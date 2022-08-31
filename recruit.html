@@ -1,0 +1,160 @@
+<!-- HTMLコード -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>よくあるお問い合わせ</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="shortcut icon" href="./assets/img/logo.png" /> -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/theme.css">
+
+    <!-- javascript -->
+    <script src="./libs/jquery/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <header class="page-header header-fixed">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="./assets/img/logo.png" alt="">
+            </a>
+            <a href="javascript:void(0)" class="nav-open"><i></i><span></span></a>
+            <div class="nav-wrapper">
+                <ul class="navs">
+                    <li class="item"><a href="#">What's Shisha</a></li>
+                    <li class="item"><a href="#">Shop Menu</a></li>
+                    <li class="item"><a herf="#">FAQ</a></li>
+                    <li class="item"><a href="#">Topics</a></li>
+                    <li class="item"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main class="page-wrapper">
+        <section class="section section--recruit">
+            <h1 class="section__title">
+            </h1>
+            <figure class="figure">
+                <img src="./assets/img/recruit-img.png" alt="" class="img">
+            </figure>
+            <form action="#">
+            <div class="section__content">
+                    
+                    <div class="form-input">
+                        <p class="comment">
+                            以下フォームをご記入し、送信ボタンを押してください。
+                        </p>
+                        
+                        <div class="form-group">
+                            <label for="name">※お名前</label>
+                            <input type="text" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="fname">※メールアドレス</label>
+                            <input type="text" name="fname">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone_number">※電話番号</label>
+                            <input type="text" name="phone_number">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">住所</label>
+                            <input type="text" name="address">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">※生年月日</label>
+                            <input type="text" name="birthday">
+                        </div>
+                        <div class="form-group">
+                            <label for="pickup_date">※面接可能日</label>
+                            <input type="text" name="pickup_date">
+                        </div>
+                        
+                        <p class="desired-notice">
+                            ※ご希望の勤務地を選択して下さい
+                        </p>
+                        <div class="form-check-group">
+                            <label class="container">
+                                <span class="text">恵比寿店勤務</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <span class="text">名古屋栄店勤務</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <span class="text">梅田阪急東通り店勤務</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <span class="text">新潟駅前店勤務</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <span class="text">神戸三宮店勤務</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <span class="text">大宮東口店勤務</span>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+
+                        </div>
+                    </div>
+                    <input type="submit" class="submit-btn" value="送信する">
+            </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <figure class="figure">
+            <img class="img" src="./assets/img/logo.png" alt="">
+        </figure>
+
+        <p class="address">
+            〒150-0012　東京都渋谷区広尾5-8-11　Barbizon22 3F
+        </p>
+
+        <p class="tel">
+            03-5447-8806<span>（代表）</span>
+        </p>
+
+        <div class="menu-bar">
+            <ul class="navs">
+                <li class="item"><a href="#">What's Shisha</a></li>
+                <li class="item"><a href="#">Shop Menu</a></li>
+                <li class="item"><a herf="#">FAQ</a></li>
+                <li class="item"><a href="#">Topics</a></li>
+                <li class="item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="sns-bar">
+            <a href="#"><img class="img" src="./assets/img/youtube.png" alt=""></a>
+            <a href="#"><img class="img" src="./assets/img/twitter.png" alt=""></a>
+            <a href="#"><img class="img" src="./assets/img/instagram.png" alt=""></a>
+            <a href="#"><img class="img" src="./assets/img/facebook.png" alt=""></a>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">プライバシーポリシー</a>
+            <a href="#">会社概要</a>
+        </div>
+    </footer>
+    
+    <script src="./assets/js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+@charset "utf-8";
+
+/* トップページのスタイル*/
+
+.page-header {
+	height: 112px;
+	background-color: #000;
+// 	overflow: hidden;
+	width: 100vw;
+	position: fixed;
+	top: -112px;
+	opacity: 0;
+	@include transition(all, 0.6s, ease);
+
+	@include media(m) {
+		height: 15vw;
+		top: -15vw;
+		left: 0;
+		z-index: 99;
+	}
+
+    .header-inner {
+    	height: 100%;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    	@include display-flex;
+    	@include justify-content-space-between;
+
+    	@include media(1440px) {
+    		margin-left: 20px;
+    		margin-right: 20px;
+    	}
+
+    	@include media(m) {
+    		@include justify-content-center;
+    		max-width: 100vw;
+    		margin-left: unset;
+    		margin-right: unset;
+    		padding-right: 16vw;
+    	}
+
+    	.logo {
+    		@include display-flex;
+    		@include flex-direction-column;
+    		@include justify-content-flex-end;
+    		@extend .hoverable;
+
+    		img {
+                height: auto;
+                width: 245px;
+                position: relative;
+                top: 17px;
+
+                @include media(m) {
+                	width: 50vw;
+                	top: 3vw;
+                }
+    		}
+    	}
+
+    	.nav-open {
+            i {
+
+            }
+
+            span {
+
+            }
+    	}
+
+    	.nav-wrapper {
+    		.navs {
+    			.item {
+    				a {
+
+    				}
+    			}
+    		}
+    	}
+    }
+
+    &.header-sticky, &.header-fixed {
+	    position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		opacity: 1;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		width: 100vw;
+		height: 8.75vw;
+		background: center center url(../img/header-shadow.png) no-repeat;
+		background-size: cover;
+		position: absolute;
+		bottom: -8.75vw;
+		left: 0;
+		z-index: -1;
+
+		@include media(m) {
+			height: 20vw;
+			bottom: -20vw;
+		}
+	}
+
+	.nav-opened & {
+
+	}
+}
+
+.page-footer {
+	background: #000;
+	padding-top: 77px;
+	padding-bottom: 60px;
+	color: white;
+
+	@include media(m) {
+		padding-top: 10vw;
+		padding-bottom: 10vw;
+	}
+
+	.figure {
+		.img {
+            margin-left: auto;
+		    margin-right: auto;
+		    width: 292px;
+		    height: auto;
+
+		    @include media(m) {
+		    	width: 60vw;
+		    }
+		}
+	}
+
+	.address {
+        margin-top: 2.5em;
+        font-family: $font-sans;
+        @include fontsize(14px);
+        margin-bottom: 2em;
+        text-align: center;
+
+        @include media(m) {
+        	@include vwfont(14px);
+        }
+	}
+
+	.tel {
+        font-family: $font-sans;
+        @include fontsize(18px);
+        text-align: center;
+        line-height: 1.5;
+        padding-left: 2em;
+        background: left center url(../img/tel.png) no-repeat;
+        background-size: contain;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include media(m) {
+        	@include vwfont(18px);
+        }
+
+        span {
+        	@include fontsize(14px);
+
+        	@include media(m) {
+				@include vwfont(14px);
+			}
+        }
+	}
+
+	.menu-bar {
+		border-top: 1px solid #4A3B06;
+		border-bottom: 1px solid #4A3B06;
+		font-family: $font-en;
+	    color: #E5C368;
+	    padding-top: 25px;
+	    padding-bottom: 25px;
+	    margin-top: 54px;
+
+	    @include media(m) {
+	    	display: none;
+	    }
+
+		.navs {
+			@include flex(1 1 auto);
+			@include display-flex;
+			@include justify-content-center;
+			list-style: none;
+			white-space: nowrap;
+
+			@include media(m) {
+				@include flex-direction-column;
+				padding-left: unset;
+				padding-right: unset;
+				margin-right: unset;
+				padding-top: unset;
+			}
+
+			.item {
+				vertical-align: middle;
+				cursor: pointer;
+				@include display-flex;
+				@include justify-content-space-between;
+				@include transition-all;
+				@include flex-center-v;
+
+				@include media(m) {
+					@include flex-wrap-wrap;
+				}
+
+				> a {
+					display: block;
+					letter-spacing: 0.03em;
+					line-height: 1;
+					@include fontsize(18px);
+
+					@media (max-width: 768px) {
+						margin-left: auto;
+						margin-right: auto;
+						letter-spacing: 0.1em;
+						@include vwfont(15px);
+						font-family: $font-serif;
+						width: 48vw;
+						position: relative;
+
+						&:after {
+							content: '';
+							position: absolute;
+							display: block;
+							height: 3vw;
+							width: 3vw;
+							border-right: 0.5px solid #707070;
+							border-bottom: 0.5px solid #707070;
+							@include transform(rotate(-45deg) translateY(-50%));
+							right: -0.5em;
+							top: 50%;
+						}
+
+						img {
+							height: 6vw;
+							width: 6vw;
+						}
+					}
+				}
+
+				&:hover {
+	//                 color: #173b63;
+					opacity: 0.6;
+					@include media(m) {
+	// 					border: unset;
+					}
+
+					> a {
+	// 					color: $color-blue1;
+						@include media(m) {
+	// 						color: $color-white;
+						}
+					}
+
+					.menu-popup {
+						opacity: 1;
+						visibility: visible;
+						z-index: 9;
+					}
+				}
+
+				& + .item {
+					margin-left: 2em;
+					@include media(m) {
+						margin-left: unset;
+					}
+				}
+			}
+		}
+	}
+
+	.sns-bar {
+		@include display-flex;
+		@include justify-content-center;
+		margin-top: 40px;
+
+		@include media(m) {
+			margin-top: 6vw;
+		}
+
+		a {
+			width: 36px;
+			height: 36px;
+			@extend .hoverable;
+
+			@include media(m) {
+				width: 8vw;
+				height: 8vw;
+			}
+
+			.img {
+                width: 100%;
+                height: auto;
+			}
+
+			& + a {
+				margin-left: 20px;
+
+				@include media(m) {
+					margin-left: 3vw;
+				}
+			}
+		}
+	}
+
+	.footer-links {
+		margin-top: 63px;
+		@include display-flex;
+		@include justify-content-center;
+
+		@include media(m) {
+			margin-top: 8vw;
+		}
+
+		a {
+			font-family: $font-sans;
+			@include fontsize(14px);
+			@extend .hoverable;
+
+			@include media(m) {
+				@include fontsize(14px);
+			}
+
+            & + a {
+            	margin-left: 2em;
+            }
+		}
+	}
+}

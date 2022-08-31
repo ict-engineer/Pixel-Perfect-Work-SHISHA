@@ -1,0 +1,297 @@
+<!-- HTMLコード -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>店舗一覧</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="shortcut icon" href="./assets/img/logo.png" /> -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/theme.css">
+
+    <!-- javascript -->
+    <script src="./libs/jquery/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <header class="page-header header-fixed">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="./assets/img/logo.png" alt="">
+            </a>
+            <a href="javascript:void(0)" class="nav-open"><i></i><span></span></a>
+            <div class="nav-wrapper">
+                <ul class="navs">
+                    <li class="item"><a href="#">What's Shisha</a></li>
+                    <li class="item"><a href="#">Shop Menu</a></li>
+                    <li class="item"><a herf="#">FAQ</a></li>
+                    <li class="item"><a href="#">Topics</a></li>
+                    <li class="item"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main class="page-wrapper">
+        <section class="section section--mainview3">
+        </section>
+        
+        <section class="section section--store-list">
+            <h1 class="section__title">
+                店舗を探す
+            </h1>
+            <div class="section__content">
+                <div class="links">
+                    <a class="store-link" href="#">恵比寿</a>
+                    <a class="store-link" href="#">梅田阪急</a>
+                    <a class="store-link" href="#">神戸三宮</a>
+                    <a class="store-link" href="#">名古屋栄</a>
+                    <a class="store-link" href="#">池袋</a>
+                    <a class="store-link" href="#">大宮東口</a>
+                    <a class="store-link" href="#">新潟</a>
+                </div>
+                <ul class="store-list">
+                    <li class="store">
+                        <div class="wrapper">
+                            <h2 class="store-title">恵比寿</h2>
+                            <figure class="store-image">
+                                <img class="img" src="./assets/img/store.png">
+                            </figure>
+                            <dl class="store-info">
+                                <dt>年中無休</dt>
+                                <dd>1PM - 1 AM (weekdays 当面の間 8PM)</dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>TEL</dt>
+                                <dd>080-9282-2081</dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>住所</dt>
+                                <dd>
+                                    〒150-0022<br>
+                                    東京都渋谷区恵比寿南１丁目８−１０<br>
+                                    ＭＹ恵比寿ビル 3F
+                                </dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>アクセス</dt>
+                                <dd>恵比寿駅西口　徒歩１分</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="store">
+                        <div class="wrapper">
+                            <h2 class="store-title">池袋</h2>
+                            <figure class="store-image">
+                                <img class="img" src="./assets/img/store.png">
+                            </figure>
+                            <dl class="store-info">
+                                <dt>年中無休</dt>
+                                <dd>テキストテキストテキスト</dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>TEL</dt>
+                                <dd>テキストテキストテキスト</dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>住所</dt>
+                                <dd>
+                                    テキストテキストテキスト
+                                </dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>アクセス</dt>
+                                <dd>テキストテキストテキスト</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="store">
+                        <div class="wrapper">
+                            <h2 class="store-title">大宮東口</h2>
+                            <figure class="store-image">
+                                <img class="img" src="./assets/img/store.png">
+                            </figure>
+                            <dl class="store-info">
+                                <dt>年中無休</dt>
+                                <dd>テキストテキストテキスト</dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>TEL</dt>
+                                <dd>テキストテキストテキスト</dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>住所</dt>
+                                <dd>
+                                    テキストテキストテキスト
+                                </dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>アクセス</dt>
+                                <dd>テキストテキストテキスト</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="store">
+                        <div class="wrapper">
+                            <h2 class="store-title">新潟</h2>
+                            <figure class="store-image">
+                                <img class="img" src="./assets/img/store.png">
+                            </figure>
+                            <dl class="store-info">
+                                <dt>年中無休</dt>
+                                <dd>テキストテキストテキスト</dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>TEL</dt>
+                                <dd>テキストテキストテキスト</dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>住所</dt>
+                                <dd>
+                                    テキストテキストテキスト
+                                </dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>アクセス</dt>
+                                <dd>テキストテキストテキスト</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="store">
+                        <div class="wrapper">
+                            <h2 class="store-title">名古屋栄</h2>
+                            <figure class="store-image">
+                                <img class="img" src="./assets/img/store.png">
+                            </figure>
+                            <dl class="store-info">
+                                <dt>定休日：月曜</dt>
+                                <dd>
+                                    3 PM - 1 PM (weekdays)<br>
+                                    3 PM - 5 PM (weekend)
+                                </dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>TEL</dt>
+                                <dd>052-211-7267</dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>住所</dt>
+                                <dd>
+                                    〒460-0008<br>
+                                    愛知県名古屋市中区栄11−16<br>
+                                    住吉ビル SOK 2F
+                                </dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>アクセス</dt>
+                                <dd>地下鉄名城線 矢場町駅（6番出口）徒歩4分</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="store">
+                        <div class="wrapper">
+                            <h2 class="store-title">梅田阪急</h2>
+                            <figure class="store-image">
+                                <img class="img" src="./assets/img/store.png">
+                            </figure>
+                            <dl class="store-info">
+                                <dt>年中無休</dt>
+                                <dd>3PM - 5 AM</dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>TEL</dt>
+                                <dd>06-6766-4922</dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>住所</dt>
+                                <dd>
+                                    〒530-0027<br>
+                                    大阪府大阪市北区堂山町3-15<br>
+                                    ロイヤルビル 2F
+                                </dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>アクセス</dt>
+                                <dd>梅田駅 地下通路M6出口 徒歩6分</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="store">
+                        <div class="wrapper">
+                            <h2 class="store-title">神戸三宮</h2>
+                            <figure class="store-image">
+                                <img class="img" src="./assets/img/store.png">
+                            </figure>
+                            <dl class="store-info">
+                                <dt>定休日：月曜</dt>
+                                <dd>
+                                    3PM - 5PM<br>
+                                    ※緊急事態宣言により当面の間休業致します。
+                                </dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>TEL</dt>
+                                <dd>078-515-6998</dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>住所</dt>
+                                <dd>
+                                    〒650-0012<br>
+                                    兵庫県神戸市中央区北長狭通<br>
+                                    １丁目９−１０プリンセスコースト2F
+                                </dd>
+                            </dl>
+                            <dl class="store-info">
+                                <dt>アクセス</dt>
+                                <dd>阪急線 神戸三宮駅 西口 徒歩2分</dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <figure class="figure">
+            <img class="img" src="./assets/img/logo.png" alt="">
+        </figure>
+
+        <p class="address">
+            〒150-0012　東京都渋谷区広尾5-8-11　Barbizon22 3F
+        </p>
+
+        <p class="tel">
+            03-5447-8806<span>（代表）</span>
+        </p>
+
+        <div class="menu-bar">
+            <ul class="navs">
+                <li class="item"><a href="#">What's Shisha</a></li>
+                <li class="item"><a href="#">Shop Menu</a></li>
+                <li class="item"><a herf="#">FAQ</a></li>
+                <li class="item"><a href="#">Topics</a></li>
+                <li class="item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="sns-bar">
+            <a href="#"><img class="img" src="./assets/img/youtube.png" alt=""></a>
+            <a href="#"><img class="img" src="./assets/img/twitter.png" alt=""></a>
+            <a href="#"><img class="img" src="./assets/img/instagram.png" alt=""></a>
+            <a href="#"><img class="img" src="./assets/img/facebook.png" alt=""></a>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">プライバシーポリシー</a>
+            <a href="#">会社概要</a>
+        </div>
+    </footer>
+    
+    <script src="./assets/js/theme.js"></script>
+</body>
+</html>
